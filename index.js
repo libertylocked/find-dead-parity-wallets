@@ -33,7 +33,7 @@ for (let currBlk = startBlock; currBlk <= endBlock; currBlk++) {
     console.log(addrs.map(addr => {
       const bal = web3.fromWei(web3.eth.getBalance(addr));
       totalBal += bal;
-      return [addr, bal];
+      return [addr, bal.toString()];
     }));
   }
   // affectedWallets = affectedWallets.concat(addrs);
